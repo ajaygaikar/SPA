@@ -1,46 +1,415 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h1><a target="_blank" href="http://www.smarttutorials.net/php-quiz-script/">{{title}}</a></h1>
+		<h1>{{title}}</h1>
 	    <br>
-	    <img alt="PHP Quiz Script" src="http://www.smarttutorials.net/wp-content/uploads/2015/02/php-quiz-script.png" class="img-responsive img-thumbnail">
-		<br><br>
-		<div class="text-center">
-			<a target="_blank" title="php quiz script demo" style="padding: 15px 50px;" class="btn btn-default btn-success" href="http://demo.smarttutorials.net/php-quiz-code/">PHP Quiz Script Demo </a>
-		</div>
-		<br>
-		<div class="well text-center">
-				<p>Login email/ Password : muni@quiz.com/123</p>
-		</div>
-		
-		<div class="text-center">
-			<a class="btn btn-success btn-demo-success" target="_blank" href="http://www.smarttutorials.net/php-quiz-script/#checkoutp"> Get this Responsive PHP Quiz Script </a>
-		</div>
-		
-		<blockquote>
-			<h2> Features:</h2>
-			<ol>
-				<li>Now users can share his/her results on Social networks (Facebook, Twitter, Google Plus, Reddit and Linkedin).</li>
-				<li>The Quiz result page will contain all questions answered by the user along with correct answer.</li>
-				<li>The Quiz result manage Grid has unique link to each taken Quiz result page, So user can refer his last Quiz results.</li>
-				<li>The User can sort Quiz results on manage Grid using quiz taken date.</li>
-	
-				<li>This online Quiz Application has user login, registration and forget password functionality.</li>
-				<li>User can able to view their previous quiz results.</li>
-				<li>Each questions can have minimum two options or maximum of six options.</li>
-				<li>This online PHP Quiz Application has session message system to indicate success or failure of the user actions.</li>
-				<li>Removed old timer, and added new javascript or jQuery timer countdown with very few lines of code.</li>
-				<li>User has my account page where user can able to change his password.</li>
-				<li>This php quiz system has warning popup when user want to leave in mid of his current Quiz test.</li>
-			</ol>
-		</blockquote>
-		<br>
-		<br>
-		<div class="text-center">
-			<a class="btn btn-success btn-demo-success" target="_blank" href="http://www.smarttutorials.net/php-quiz-script/#checkoutp"> Get this Responsive PHP Quiz Script </a>
-		</div>
-		<br>
-		<br><br>
-		<br>
-	
+	   <div class="content">
+  <h1 id="using-angular-routes-in-a-single-page-application">Using Angular routes in a single-page application<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#using-angular-routes-in-a-single-page-application"><i class="material-icons">link</i></a></h1><aio-toc class="embedded" ng-version="14.1.0-next.3"><div class="toc-inner no-print collapsed ng-star-inserted"><!----><button type="button" title="Expand/collapse contents" aria-label="Expand/collapse contents" class="toc-heading embedded secondary ng-star-inserted" aria-pressed="false"> Contents <mat-icon role="img" svgicon="keyboard_arrow_right" class="mat-icon notranslate rotating-icon collapsed mat-icon-no-color" aria-hidden="true" data-mat-icon-type="svg" data-mat-icon-name="keyboard_arrow_right"><svg focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"></path>
+</svg></mat-icon></button><!----><ul class="toc-list embedded"><!----><!----><li class="h2 ng-star-inserted" title="Objectives"><a href="guide/router-tutorial#objectives">Objectives</a></li><!----><!----><li class="h2 ng-star-inserted" title="Prerequisites"><a href="guide/router-tutorial#prerequisites">Prerequisites</a></li><!----><!----><li class="h2 ng-star-inserted" title="Create a sample application"><a href="guide/router-tutorial#create-a-sample-application">Create a sample application</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Import RouterModule from @angular/router"><a href="guide/router-tutorial#import-routermodule-from-angularrouter">Import <code>RouterModule</code> from <code>@angular/router</code></a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Define your routes"><a href="guide/router-tutorial#define-your-routes">Define your routes</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Update your component with router-outlet"><a href="guide/router-tutorial#update-your-component-with-router-outlet">Update your component with <code>router-outlet</code></a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Control navigation with UI elements"><a href="guide/router-tutorial#control-navigation-with-ui-elements">Control navigation with UI elements</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Identify the active route"><a href="guide/router-tutorial#identify-the-active-route">Identify the active route</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Adding a redirect"><a href="guide/router-tutorial#adding-a-redirect">Adding a redirect</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Adding a 404 page"><a href="guide/router-tutorial#adding-a-404-page">Adding a 404 page</a></li><!----><!----><li class="h2 secondary ng-star-inserted" title="Next steps"><a href="guide/router-tutorial#next-steps">Next steps</a></li><!----><!----><!----></ul><button type="button" title="Expand/collapse contents" aria-label="Expand/collapse contents" class="toc-more-items embedded material-icons collapsed ng-star-inserted" aria-pressed="false"></button><!----></div><!----></aio-toc>
+<p>This tutorial describes how to build a single-page application, SPA that uses multiple Angular routes.</p>
+<p>In a Single Page Application (SPA), all of your application's functions exist in a single HTML page.
+As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page.
+This pattern can significantly improve your application's user experience.</p>
+<p>To define how users navigate through your application, you use routes.
+Add routes to define how users navigate from one part of your application to another.
+You can also configure routes to guard against unexpected or unauthorized behavior.</p>
+<p>To explore a sample application featuring the contents of this tutorial, see the <live-example ng-version="14.1.0-next.3"><span style="display: none;"></span><span><!----><!----><span class="ng-star-inserted"><a target="_blank" title="live example" href="generated/live-examples/router-tutorial/stackblitz.html">live example</a><span class="ng-star-inserted"> / <a download="" title="Download example" href="generated/zips/router-tutorial/router-tutorial.zip">download example</a></span><!----></span><!----></span></live-example>.</p>
+<h2 id="objectives">Objectives<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#objectives"><i class="material-icons">link</i></a></h2>
+<ul>
+<li>Organize a sample application's features into modules.</li>
+<li>Define how to navigate to a component.</li>
+<li>Pass information to a component using a parameter.</li>
+<li>Structure routes by nesting several routes.</li>
+<li>Check whether users can access a route.</li>
+<li>Control whether the application can discard unsaved changes.</li>
+<li>Improve performance by pre-fetching route data and lazy loading feature modules.</li>
+<li>Require specific criteria to load components.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#prerequisites"><i class="material-icons">link</i></a></h2>
+<p>To complete this tutorial, you should have a basic understanding of the following concepts:</p>
+<ul>
+<li>JavaScript</li>
+<li>HTML</li>
+<li>CSS</li>
+<li><a href="cli">Angular CLI</a></li>
+</ul>
+<p>You might find the <a href="tutorial">Tour of Heroes tutorial</a> helpful, but it is not required.</p>
+<h2 id="create-a-sample-application">Create a sample application<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#create-a-sample-application"><i class="material-icons">link</i></a></h2>
+<p>Using the Angular CLI, create a new application, <em>angular-router-sample</em>.
+This application will have two components: <em>crisis-list</em> and <em>heroes-list</em>.</p>
+<ol>
+<li>
+<p>Create a new Angular project, <em>angular-router-sample</em>.</p>
+<code-example format="shell" language="shell" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-shell prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">ng </span><span class="kwd">new</span><span class="pln"> angular</span><span class="pun">-</span><span class="pln">router</span><span class="pun">-</span><span class="pln">sample</span></code>
+    </pre></aio-code></code-example>
+<p>When prompted with <code>Would you like to add Angular routing?</code>, select <code>N</code>.</p>
+<p>When prompted with <code>Which stylesheet format would you like to use?</code>, select <code>CSS</code>.</p>
+<p>After a few moments, a new project, <code>angular-router-sample</code>, is ready.</p>
+</li>
+<li>
+<p>From your terminal, navigate to the <code>angular-router-sample</code> directory.</p>
+</li>
+<li>
+<p>Create a component, <em>crisis-list</em>.</p>
+<code-example format="shell" language="shell" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-shell prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">ng generate component crisis</span><span class="pun">-</span><span class="pln">list</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>In your code editor, locate the file, <code>crisis-list.component.html</code> and replace the placeholder content with the following HTML.</p>
+<code-example header="src/app/crisis-list/crisis-list.component.html" path="router-tutorial/src/app/crisis-list/crisis-list.component.html" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/crisis-list/crisis-list.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/crisis-list/crisis-list.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;h3&gt;</span><span class="pln">CRISIS CENTER</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+</span><span class="tag">&lt;p&gt;</span><span class="pln">Get your crisis here</span><span class="tag">&lt;/p&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>Create a second component, <em>heroes-list</em>.</p>
+<code-example format="shell" language="shell" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-shell prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">ng generate component heroes</span><span class="pun">-</span><span class="pln">list</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>In your code editor, locate the file, <code>heroes-list.component.html</code> and replace the placeholder content with the following HTML.</p>
+<code-example header="src/app/heroes-list/heroes-list.component.html" path="router-tutorial/src/app/heroes-list/heroes-list.component.html" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/heroes-list/heroes-list.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/heroes-list/heroes-list.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;h3&gt;</span><span class="pln">HEROES</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+</span><span class="tag">&lt;p&gt;</span><span class="pln">Get your heroes here</span><span class="tag">&lt;/p&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>In your code editor, open the file, <code>app.component.html</code> and replace its contents with the following HTML.</p>
+<code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="setup" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;h1&gt;</span><span class="pln">Angular </span><a href="api/router/Router" class="code-anchor"><span class="pln">Router</span></a><span class="pln"> Sample</span><span class="tag">&lt;/h1&gt;</span><span class="pln">
+</span><span class="tag">&lt;app-crisis-list&gt;&lt;/app-crisis-list&gt;</span><span class="pln">
+</span><span class="tag">&lt;app-heroes-list&gt;&lt;/app-heroes-list&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>Verify that your new application runs as expected by running the <code>ng serve</code> command.</p>
+<code-example format="shell" language="shell" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-shell prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">ng serve</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:4200</code>.</p>
+<p>You should see a single web page, consisting of a title and the HTML of your two components.</p>
+</li>
+</ol>
+<h2 id="import-routermodule-from-angularrouter">Import <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code> from <code>@angular/router</code><a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#import-routermodule-from-angularrouter"><i class="material-icons">link</i></a></h2>
+<p>Routing lets you display specific views of your application depending on the URL path.
+To add this functionality to your sample application, you need to update the <code>app.module.ts</code> file to use the module, <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code>.
+You import this module from <code>@angular/router</code>.</p>
+<ol>
+<li>
+<p>From your code editor, open the <code>app.module.ts</code> file.</p>
+</li>
+<li>
+<p>Add the following <code>import</code> statement.</p>
+<code-example header="src/app/app.module.ts" path="router-tutorial/src/app/app.module.ts" region="router-import" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.module.ts</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.module.ts">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><a href="api/router/RouterModule" class="code-anchor"><span class="typ">RouterModule</span></a><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'@angular/router'</span><span class="pun">;</span></code>
+    </pre></aio-code></code-example>
+</li>
+</ol>
+<h2 id="define-your-routes">Define your routes<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#define-your-routes"><i class="material-icons">link</i></a></h2>
+<p>In this section, you'll define two routes:</p>
+<ul>
+<li>The route <code>/crisis-center</code> opens the <code>crisis-center</code> component.</li>
+<li>The route <code>/heroes-list</code> opens the <code>heroes-list</code> component.</li>
+</ul>
+<p>A route definition is a JavaScript object.
+Each route typically has two properties.
+The first property, <code>path</code>, is a string that specifies the URL path for the route.
+The second property, <code>component</code>, is a string that specifies what component your application should display for that path.</p>
+<ol>
+<li>
+<p>From your code editor, open the <code>app.module.ts</code> file.</p>
+</li>
+<li>
+<p>Locate the <code>@<a href="api/core/NgModule" class="code-anchor">NgModule</a>()</code> section.</p>
+</li>
+<li>
+<p>Replace the <code>imports</code> array in that section with the following.</p>
+<code-example header="src/app/app.module.ts" path="router-tutorial/src/app/app.module.ts" region="import-basic" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.module.ts</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.module.ts">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">imports</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+  </span><a href="api/platform-browser/BrowserModule" class="code-anchor"><span class="typ">BrowserModule</span></a><span class="pun">,</span><span class="pln">
+  </span><span class="typ">RouterModule</span><span class="pun">.</span><span class="pln">forRoot</span><span class="pun">([</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'crisis-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">CrisisListComponent</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'heroes-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">HeroesListComponent</span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">]),</span><span class="pln">
+</span><span class="pun">],</span></code>
+    </pre></aio-code></code-example>
+</li>
+</ol>
+<p>This code adds the <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code> to the <code>imports</code> array.
+Next, the code uses the <code>forRoot()</code> method of the <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code> to define your two routes.
+This method takes an array of JavaScript objects, with each object defining the properties of a route.
+The <code>forRoot()</code> method ensures that your application only instantiates one <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code>.
+For more information, see <a href="guide/singleton-services#forroot-and-the-router">Singleton Services</a>.</p>
+<h2 id="update-your-component-with-router-outlet">Update your component with <code><a href="api/router/RouterOutlet" class="code-anchor">router-outlet</a></code><a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#update-your-component-with-router-outlet"><i class="material-icons">link</i></a></h2>
+<p>At this point, you have defined two routes for your application.
+However, your application still has both the <code>crisis-list</code> and <code>heroes-list</code> components hard-coded in your <code>app.component.html</code> template.
+For your routes to work, you need to update your template to dynamically load a component based on the URL path.</p>
+<p>To implement this functionality, you add the <code><a href="api/router/RouterOutlet" class="code-anchor">router-outlet</a></code> directive to your template file.</p>
+<ol>
+<li>
+<p>From your code editor, open the <code>app.component.html</code> file.</p>
+</li>
+<li>
+<p>Delete the following lines.</p>
+<code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="components" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;app-crisis-list&gt;&lt;/app-crisis-list&gt;</span><span class="pln">
+</span><span class="tag">&lt;app-heroes-list&gt;&lt;/app-heroes-list&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>Add the <code><a href="api/router/RouterOutlet" class="code-anchor">router-outlet</a></code> directive.</p>
+<code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="router-outlet" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;</span><a href="api/router/RouterOutlet" class="code-anchor"><span class="tag">router-outlet</span></a><span class="tag">&gt;&lt;/</span><a href="api/router/RouterOutlet" class="code-anchor"><span class="tag">router-outlet</span></a><span class="tag">&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+</ol>
+<p>View your updated application in your browser.
+You should see only the application title.
+To view the <code>crisis-list</code> component, add <code>crisis-list</code> to the end of the path in your browser's address bar.
+For example:</p>
+<code-example format="https" language="https" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-https prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">http</span><span class="pun">:</span><span class="com">//localhost:4200/crisis-list</span></code>
+    </pre></aio-code></code-example>
+<p>Notice that the <code>crisis-list</code> component displays.
+Angular is using the route you defined to dynamically load the component.
+You can load the <code>heroes-list</code> component the same way:</p>
+<code-example format="https" language="https" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-https prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">http</span><span class="pun">:</span><span class="com">//localhost:4200/heroes-list</span></code>
+    </pre></aio-code></code-example>
+<h2 id="control-navigation-with-ui-elements">Control navigation with UI elements<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#control-navigation-with-ui-elements"><i class="material-icons">link</i></a></h2>
+<p>Currently, your application supports two routes.
+However, the only way to use those routes is for the user to manually type the path in the browser's address bar.
+In this section, you'll add two links that users can click to navigate between the <code>heroes-list</code> and <code>crisis-list</code> components.
+You'll also add some CSS styles.
+While these styles are not required, they make it easier to identify the link for the currently-displayed component.
+You'll add that functionality in the next section.</p>
+<ol>
+<li>
+<p>Open the <code>app.component.html</code> file and add the following HTML below the title.</p>
+<code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="nav" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;nav&gt;</span><span class="pln">
+  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><a href="api/router/RouterLink" class="code-anchor"><span class="atn">routerLink</span></a><span class="pun">=</span><span class="atv">"/crisis-list"</span><span class="tag">&gt;</span><span class="pln">Crisis Center</span><span class="tag">&lt;/a&gt;</span><span class="pln"> |
+  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><a href="api/router/RouterLink" class="code-anchor"><span class="atn">routerLink</span></a><span class="pun">=</span><span class="atv">"/heroes-list"</span><span class="tag">&gt;</span><span class="pln">Heroes</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+</span><span class="tag">&lt;/nav&gt;</span></code>
+    </pre></aio-code></code-example>
+<p>This HTML uses an Angular directive, <code><a href="api/router/RouterLink" class="code-anchor">routerLink</a></code>.
+This directive connects the routes you defined to your template files.</p>
+</li>
+<li>
+<p>Open the <code>app.component.css</code> file and add the following styles.</p>
+<code-example header="src/app/app.component.css" path="router-tutorial/src/app/app.component.css" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.css</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.css">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pun">.</span><span class="pln">button </span><span class="pun">{</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="lit">0</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="com">#ffffff;</span><span class="pln">
+    background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#ffffff linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);</span><span class="pln">
+    border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6px</span><span class="pun">;</span><span class="pln">
+    border</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> solid </span><span class="com">#dcdcdc;</span><span class="pln">
+    display</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">inline</span><span class="pun">-</span><span class="pln">block</span><span class="pun">;</span><span class="pln">
+    cursor</span><span class="pun">:</span><span class="pln"> pointer</span><span class="pun">;</span><span class="pln">
+    color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#666666;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Arial</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15px</span><span class="pun">;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> bold</span><span class="pun">;</span><span class="pln">
+    padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6px</span><span class="pln"> </span><span class="lit">24px</span><span class="pun">;</span><span class="pln">
+    text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+    text</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="com">#ffffff;</span><span class="pln">
+    outline</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">activebutton </span><span class="pun">{</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="lit">0</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="com">#dcecfb;</span><span class="pln">
+    background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);</span><span class="pln">
+    border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6px</span><span class="pun">;</span><span class="pln">
+    border</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> solid </span><span class="com">#84bbf3;</span><span class="pln">
+    display</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">inline</span><span class="pun">-</span><span class="pln">block</span><span class="pun">;</span><span class="pln">
+    cursor</span><span class="pun">:</span><span class="pln"> pointer</span><span class="pun">;</span><span class="pln">
+    color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#ffffff;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Arial</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15px</span><span class="pun">;</span><span class="pln">
+    font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> bold</span><span class="pun">;</span><span class="pln">
+    padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6px</span><span class="pln"> </span><span class="lit">24px</span><span class="pun">;</span><span class="pln">
+    text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+    text</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="com">#528ecc;</span><span class="pln">
+    outline</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+    </pre></aio-code></code-example>
+</li>
+</ol>
+<p>If you view your application in the browser, you should see these two links.
+When you click on a link, the corresponding component appears.</p>
+<h2 id="identify-the-active-route">Identify the active route<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#identify-the-active-route"><i class="material-icons">link</i></a></h2>
+<p>While users can navigate your application using the links you added in the previous section, they don't have a straightforward way to identify what the active route is.
+Add this functionality using Angular's <code><a href="api/router/RouterLinkActive" class="code-anchor">routerLinkActive</a></code> directive.</p>
+<ol>
+<li>
+<p>From your code editor, open the <code>app.component.html</code> file.</p>
+</li>
+<li>
+<p>Update the anchor tags to include the <code><a href="api/router/RouterLinkActive" class="code-anchor">routerLinkActive</a></code> directive.</p>
+<code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="routeractivelink" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;nav&gt;</span><span class="pln">
+  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln">
+     </span><a href="api/router/RouterLink" class="code-anchor"><span class="atn">routerLink</span></a><span class="pun">=</span><span class="atv">"/crisis-list"</span><span class="pln">
+     </span><a href="api/router/RouterLinkActive" class="code-anchor"><span class="atn">routerLinkActive</span></a><span class="pun">=</span><span class="atv">"activebutton"</span><span class="pln">
+     </span><span class="atn">ariaCurrentWhenActive</span><span class="pun">=</span><span class="atv">"page"</span><span class="tag">&gt;</span><span class="pln">
+    Crisis Center
+  </span><span class="tag">&lt;/a&gt;</span><span class="pln"> |
+  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln">
+     </span><a href="api/router/RouterLink" class="code-anchor"><span class="atn">routerLink</span></a><span class="pun">=</span><span class="atv">"/heroes-list"</span><span class="pln">
+     </span><a href="api/router/RouterLinkActive" class="code-anchor"><span class="atn">routerLinkActive</span></a><span class="pun">=</span><span class="atv">"activebutton"</span><span class="pln">
+     </span><span class="atn">ariaCurrentWhenActive</span><span class="pun">=</span><span class="atv">"page"</span><span class="tag">&gt;</span><span class="pln">
+    Heroes
+  </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+</span><span class="tag">&lt;/nav&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+</ol>
+<p>View your application again.
+As you click one of the buttons, the style for that button updates automatically, identifying the active component to the user.
+By adding the <code><a href="api/router/RouterLinkActive" class="code-anchor">routerLinkActive</a></code> directive, you inform your application to apply a specific CSS class to the active route.
+In this tutorial, that CSS class is <code>activebutton</code>, but you could use any class that you want.</p>
+<p>Note that we are also specifying a value for the <code><a href="api/router/RouterLinkActive" class="code-anchor">routerLinkActive</a></code>'s <code>ariaCurrentWhenActive</code>. This makes sure that visually impaired users (which may not perceive the different styling being applied) can also identify the active button. For more information see the Accessibility Best Practices <a href="/guide/accessibility#active-links-identification">Active links identification section</a>.</p>
+<h2 id="adding-a-redirect">Adding a redirect<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#adding-a-redirect"><i class="material-icons">link</i></a></h2>
+<p>In this step of the tutorial, you add a route that redirects the user to display the <code>/heroes-list</code> component.</p>
+<ol>
+<li>
+<p>From your code editor, open the <code>app.module.ts</code> file.</p>
+</li>
+<li>
+<p>In the <code>imports</code> array, update the <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code> section as follows.</p>
+<code-example header="src/app/app.module.ts" path="router-tutorial/src/app/app.module.ts" region="import-redirect" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.module.ts</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.module.ts">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">imports</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+  </span><a href="api/platform-browser/BrowserModule" class="code-anchor"><span class="typ">BrowserModule</span></a><span class="pun">,</span><span class="pln">
+  </span><span class="typ">RouterModule</span><span class="pun">.</span><span class="pln">forRoot</span><span class="pun">([</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'crisis-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">CrisisListComponent</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'heroes-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">HeroesListComponent</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln"> redirectTo</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/heroes-list'</span><span class="pun">,</span><span class="pln"> pathMatch</span><span class="pun">:</span><span class="pln"> </span><span class="str">'full'</span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">]),</span><span class="pln">
+</span><span class="pun">],</span></code>
+    </pre></aio-code></code-example>
+<p>Notice that this new route uses an empty string as its path.
+In addition, it replaces the <code>component</code> property with two new ones:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Properties</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>redirectTo</code></td>
+<td align="left">This property instructs Angular to redirect from an empty path to the <code>heroes-list</code> path.</td>
+</tr>
+<tr>
+<td align="left"><code>pathMatch</code></td>
+<td align="left">This property instructs Angular on how much of the URL to match. For this tutorial, you should set this property to <code>full</code>. This strategy is recommended when you have an empty string for a path. For more information about this property, see the <a href="api/router/Route">Route API documentation</a>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>Now when you open your application, it displays the <code>heroes-list</code> component by default.</p>
+<h2 id="adding-a-404-page">Adding a 404 page<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#adding-a-404-page"><i class="material-icons">link</i></a></h2>
+<p>It is possible for a user to try to access a route that you have not defined.
+To account for this behavior, the best practice is to display a 404 page.
+In this section, you'll create a 404 page and update your route configuration to show that page for any unspecified routes.</p>
+<ol>
+<li>
+<p>From the terminal, create a new component, <code>PageNotFound</code>.</p>
+<code-example format="shell" language="shell" ng-version="14.1.0-next.3"><div style="display: none;"></div><!----><aio-code><pre class="lang-shell prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">ng generate component page</span><span class="pun">-</span><span class="kwd">not</span><span class="pun">-</span><span class="pln">found</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>From your code editor, open the <code>page-not-found.component.html</code> file and replace its contents with the following HTML.</p>
+<code-example header="src/app/page-not-found/page-not-found.component.html" path="router-tutorial/src/app/page-not-found/page-not-found.component.html" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/page-not-found/page-not-found.component.html</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/page-not-found/page-not-found.component.html">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="tag">&lt;h2&gt;</span><span class="pln">Page Not Found</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+</span><span class="tag">&lt;p&gt;</span><span class="pln">We couldn't find that page! Not even with x-ray vision.</span><span class="tag">&lt;/p&gt;</span></code>
+    </pre></aio-code></code-example>
+</li>
+<li>
+<p>Open the <code>app.module.ts</code> file.
+In the <code>imports</code> array, update the <code><a href="api/router/RouterModule" class="code-anchor">RouterModule</a></code> section as follows.</p>
+<code-example header="src/app/app.module.ts" path="router-tutorial/src/app/app.module.ts" region="import-wildcard" ng-version="14.1.0-next.3"><div style="display: none;"></div><header class="ng-star-inserted">src/app/app.module.ts</header><!----><aio-code class="headed-code"><pre class="lang- prettyprint">      <button title="Copy code snippet" class="material-icons copy-button no-print ng-star-inserted" aria-label="Copy code snippet from src/app/app.module.ts">
+        <span aria-hidden="true">content_copy</span>
+      </button><!---->
+      <code class="animated fadeIn"><span class="pln">imports</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+  </span><a href="api/platform-browser/BrowserModule" class="code-anchor"><span class="typ">BrowserModule</span></a><span class="pun">,</span><span class="pln">
+  </span><span class="typ">RouterModule</span><span class="pun">.</span><span class="pln">forRoot</span><span class="pun">([</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'crisis-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">CrisisListComponent</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'heroes-list'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">HeroesListComponent</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln"> redirectTo</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/heroes-list'</span><span class="pun">,</span><span class="pln"> pathMatch</span><span class="pun">:</span><span class="pln"> </span><span class="str">'full'</span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'**'</span><span class="pun">,</span><span class="pln"> component</span><span class="pun">:</span><span class="pln"> </span><span class="typ">PageNotFoundComponent</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">]),</span><span class="pln">
+</span><span class="pun">],</span></code>
+    </pre></aio-code></code-example>
+<p>The new route uses a path, <code>**</code>.
+This path is how Angular identifies a wildcard route.
+Any route that does not match an existing route in your configuration will use this route.</p>
+<div class="alert is-important">
+<p>Notice that the wildcard route is placed at the end of the array.
+The order of your routes is important, as Angular applies routes in order and uses the first match it finds.</p>
+</div>
+</li>
+</ol>
+<p>Try navigating to a non-existing route on your application, such as <code>http://localhost:4200/powers</code>.
+This route doesn't match anything defined in your <code>app.module.ts</code> file.
+However, because you defined a wildcard route, the application automatically displays your <code>PageNotFound</code> component.</p>
+<h2 id="next-steps">Next steps<a title="Link to this heading" class="header-link" aria-hidden="true" href="guide/router-tutorial#next-steps"><i class="material-icons">link</i></a></h2>
+<p>At this point, you have a basic application that uses Angular's routing feature to change what components the user can see based on the URL address.
+You have extended these features to include a redirect, as well as a wildcard route to display a custom 404 page.</p>
+<p>For more information about routing, see the following topics:</p>
+<ul>
+<li><a href="guide/router">In-app Routing and Navigation</a></li>
+<li><a href="api/router">Router API</a></li>
+</ul>
+<!-- links -->
+<!-- external links -->
+<!-- end links -->
+
+  <div class="reviewed">Last reviewed on Mon Feb 28 2022</div>
+</div>
 	</div>
 </div>
