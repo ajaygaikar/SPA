@@ -19,10 +19,10 @@
     
     
     singlePageApp.controller('HomeController',function($scope){
-        $scope.title = "Invoice Script Using PHP MySQL jQuery Ajax And Boostrap - Version 2";
+        $scope.title = "What is Angular";
     });
     singlePageApp.controller('QuizController',function($scope){
-    	$scope.title = "Responsive PHP Quiz Script";
+    	$scope.title = "Using Angular routes in a single-page application";
     });
     singlePageApp.controller('ContactController',function($scope){
     	$scope.title = "Contact";
